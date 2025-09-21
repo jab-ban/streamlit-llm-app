@@ -8,7 +8,11 @@
 
 import streamlit as st
 from groq import Groq
-api_key = "gsk_XXXXXXXX"
+import os
+from dotenv import load_dotenv
+
+load_dotenv("envi")  
+api_key = os.getenv("GROQ_API_KEY")
 llm = Groq(api_key=api_key)
 messages = [
     {"role": "system", "content": "i am a helpful assistant"},
