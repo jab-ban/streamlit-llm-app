@@ -21,8 +21,7 @@ def run_llm(prompt):
     messages.append({"role": "user", "content": prompt})
 
     LLM = llm.chat.completions.create(
-        model="llama-3.1-8b-instant"
-", 
+        model="llama-3.1-8b-instant",
         messages=messages,
         max_tokens=100000,
         temperature=0.3
