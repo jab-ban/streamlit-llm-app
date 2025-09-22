@@ -46,6 +46,8 @@ def run_llm(prompt):
 """
 
 st.title('My llm app')
+
+st.image("https://share.google/images/b1zyJ9kduB4bs8DPT", width=300, caption="Your AI Assistant 🤖")
 st.header('ask the assistant:')
 st.write('welcome to my first llm app!')
 user_input=st.text_input('enter your question here:')
