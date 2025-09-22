@@ -17,6 +17,15 @@ llm = Groq(api_key=api_key)
 messages = [
     {"role": "system", "content": "i am a helpful assistant"},
 ]
+st.sidebar.title("⚙️ Settings")
+temperature = st.sidebar.slider(
+    "Model Temperature (0 = ثابت / 1 = عشوائي):", 
+    0.0, 1.0, 0.3, 0.1
+)
+max_tokens = st.sidebar.slider(
+    "Max Tokens:", 
+    100, 2000, 500, 100
+)
 def run_llm(prompt):
     messages.append({"role": "user", "content": prompt})
 
