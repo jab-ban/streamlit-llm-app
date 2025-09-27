@@ -19,7 +19,7 @@ messages = [
 ]
 st.sidebar.title("⚙️ Settings")
 temperature = st.sidebar.slider(
-    "Model Temperature (0 = ثابت / 1 = عشوائي):", 
+    "Model Temperature :", 
     0.0, 1.0, 0.3, 0.1
 )
 max_tokens = st.sidebar.slider(
